@@ -12,9 +12,11 @@
 
 Método numérico para la integración, conocida como el Método del Rectángulo, utiliza una aproximación basada en rectángulos para calcular la integral definida de una función en un intervalo dado. En términos generales, la fórmula se expresa como:
 
-$$
-\ \int_{a}^{b} f(x) \, dx \approx h \sum_{i=0}^{n-1} f(x_i) \
-$$
+<p align="center">
+  <img src="assets/img/rectangulo.svg" alt="Ecuación">
+</p>
+
+
 
 ```Python
 import numpy as np
@@ -67,9 +69,10 @@ plt.show()
 
 Método numérico de integración conocida como Método de Simpson 1/3 emplea una estimación basada en parábolas para determinar la integral definida de una función dentro de un rango específico. La expresión general de este método se describe mediante la siguiente fórmula:
 
-$$
-\int_{a}^{b} f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) \right]
-$$
+<p align="center">
+  <img src="assets/img/simpson.svg" alt="Ecuación">
+</p>
+
 
 ```Python
 # Importar las librerías necesarias
@@ -114,4 +117,3 @@ plt.title("Metodo de Simpson")
 plt.show()
 
 ```
-
