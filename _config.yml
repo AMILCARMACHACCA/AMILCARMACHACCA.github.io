@@ -11,8 +11,8 @@ description: <p align="center">🏗️ Structural Engineering </p>
   <p align="justify">
   Estudiante de Ingeniería Civil en el octavo semestre. Mi fascinación se centra en la ingeniería estructural, la programación y la geotecnia. Estoy comprometido con el aprendizaje constante y el desarrollo de habilidades en diversas áreas.
   <br><br>
-  Poseo habilidades en Python, Revit, AutoCAD, Delphin Express y S10.
+  Poseo habilidades en Python, Revit, AutoCAD, Delphin Express y S10.                                                                                                                                                  
   <br><br>
   </p>
-  <!--                                                                                                                                                                                              -->
-      
+google_analytics:
+theme: jekyll-theme-minimal   
