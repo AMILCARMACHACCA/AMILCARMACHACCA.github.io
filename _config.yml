@@ -1,6 +1,19 @@
-title: AMILCAR MACHACCA
+title: <p align="center"> Amilcar Machacca</p>
+
 logo: /assets/img/logo.png
-description: ¡Hola! Soy Amilcar Machacca Mayo, un apasionado estudiante de Ingeniería Civil en el octavo semestre. Mi fascinación se centra en la ingeniería estructural, la programación y la geotecnia. Estoy comprometido con el aprendizaje constante y el desarrollo de habilidades en diversas áreas. Poseo habilidades técnicas en programación, utilizando Python, y experiencia en el manejo de software de ingeniería como Revit, AutoCAD, Delphin Express y S10. Además, tengo destrezas en herramientas de oficina como Word y Excel. Explorar y aplicar conocimientos es mi motor de motivación.
-show_downloads: false
-google_analytics:
+
+description: <p align="center">🏗️ Structural Engineering </p>
+  <p align="center">
+  <a href="https://web.facebook.com/tommy.sllb">Structural Tech</a> |
+  <a href="https://www.linkedin.com/in/amilcar-machacca-mayo-7635622a3/">LinkedIn</a>
+  </p>
+  
+  <p align="justify">
+  Estudiante de Ingeniería Civil en el octavo semestre. Mi fascinación se centra en la ingeniería estructural, la programación y la geotecnia. Estoy comprometido con el aprendizaje constante y el desarrollo de habilidades en diversas áreas.
+  <br><br>
+  Poseo habilidades en Python, Revit, AutoCAD, Delphin Express y S10.
+  <br><br>
+  </p>
+
+google_analytics: G-ZZYG0XLBM7
 theme: jekyll-theme-minimal
