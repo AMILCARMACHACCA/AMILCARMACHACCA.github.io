@@ -1,123 +1,116 @@
+<center><span style="font-size: 40px; color: #000080;"><b>PORTAFOLIO</b></span></center>
+
+<center><span style="font-size: 20px;"><b>PROYECTOS DE INGENIERÍA ESTRUCTURAL</b></span></center>
+
 ---
-layout: default
----
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# **1. MÉTODOS NUMÉRICOS**
 
-[Link to another page](./another-page.html).
+## **1.1. METODO DE RECTANGULO**
 
-There should be whitespace between paragraphs.
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1x_ca2-5u-1tdmCVc-W1JuR15ZftuTgDx?usp=sharing)
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Método numérico para la integración, conocida como el Método del Rectángulo, utiliza una aproximación basada en rectángulos para calcular la integral definida de una función en un intervalo dado. En términos generales, la fórmula se expresa como:
 
-# Header 1
+$$
+\int_{a}^{b} f(x) \, dx \approx h \sum_{i=0}^{n-1} f(x_i)
+$$
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+```Python
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.integrate as spi
 
-## Header 2
+# ingreso de datos
+n= 30                         # numero de intervalos
+a= 0                         # limite inferior
+b= 5                          # limite superior
+f = 'np.cos(x) + 0.1 * np.cos(2*x)'            # funcion a integrar
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+# calculos iniciales
+h = (b - a) / n                                                   # ancho de los intervalos
+xi = np.linspace(a, b, n + 1)                                     # nodos
 
-### Header 3
+# calculo de los puntos medios
+x = []                                                            # lista vacia para los puntos medios
+for i in range(1, n + 1):
+    punto_medio = (xi[i - 1] + xi[i]) / 2                         # punto medio
+    x.append(punto_medio)                                         # adiciona el punto medio a la lista x
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+x = np.array(x)                                                   # convierte la lista x en un arreglo
+y = eval(f)                                                       # evaluacion de la funcion
+
+# calculo de la integral
+integral  = h*np.sum(y)
+print("el resultado aprox. de la integral es::", integral)
+
+#comprobacion con scipy
+Ireal=spi.quad(lambda x: eval(f),a,b)                              # calcular la integral real
+print("el resultado real de la integral es: ",Ireal[0])            # imprimir resultado
+
+# Gráfico del metodo de integración
+plt.bar(x, y, width=h, alpha=0.7, align='center', color=plt.cm.viridis(np.linspace(0, 1, len(x))))
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Histograma y Curva de la Función')
+
+# Gráfico de la curva f(x)
+x_c = np.linspace(a, b, 1000)
+y_c = eval(f.replace('x','x_c'))                                     # Evaluar f en 
+plt.plot(x_c, y_c, color='red')
+plt.show()
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+## **1.2. METODO DE SIMPSON 1/3**
 
-#### Header 4
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1BJUCvWnr_2vyh6tou9v7PCyeUiRCDV70?usp=sharing)
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Método numérico de integración conocida como Método de Simpson 1/3 emplea una estimación basada en parábolas para determinar la integral definida de una función dentro de un rango específico. La expresión general de este método se describe mediante la siguiente fórmula:
+$$
+\int_{a}^{b} f(x) \, dx \approx \frac{h}{3} [ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) ]
+$$
 
-##### Header 5
+```Python
+# Importar las librerías necesarias
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.integrate as spi
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+# ingreso de datos
+n= 30                         # numero de intervalos
+a= 0                         # limite inferior
+b= 4                          # limite superior
+f = 'np.sin(x**2)'            # funcion a integrar
 
-###### Header 6
+# metodo de simpson
+h=(b-a)/n                      # ancho de los intervalos
+x=np.arange(a,b+h,h)           # vector de nodos
+y=eval(f)                      # evaluar la funcion en los nodos
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+#calculo de la integral
+s=y[0]+y[n]                    # sumar los nodos 0 y n
+for i in range(1,n):           # sumar los nodos intermedios
+    if i%2==0:                 # si es par
+        s+=2*y[i]
+    else:                      # si es impar
+        s+=4*y[i]
+s=s*h/3                                                             # multiplicar por h/3
+print("el resultado aprox. de la integral es: ",s)                  # imprimir resultado
 
-### There's a horizontal rule below this.
+#comprobacion con scipy
+Ireal=spi.quad(lambda x: eval(f),a,b)                               # calcular la integral real
+print("el resultado real de la integral es: ",Ireal[0])             # imprimir resultado
 
-* * *
+# ploteo de la funcion y metodo de simpson
+x1 = np.linspace(a, b, 10000)
+y1 = eval(f.replace('x', 'x1'))                                      # Calcula la función en los puntos x1
 
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+plt.figure(figsize=(15, 5))
+plt.plot(x1, y1, color='r', lw=2)
+plt.plot(x, y, color='k', lw=0.5, alpha=1)
+plt.fill_between(x, y, alpha=0.1, color='b')
+plt.title("Metodo de Simpson")
+plt.show()
 
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
 
-```
-The final element.
-```
