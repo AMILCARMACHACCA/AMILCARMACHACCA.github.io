@@ -66,8 +66,9 @@ plt.show()
 [![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1BJUCvWnr_2vyh6tou9v7PCyeUiRCDV70?usp=sharing)
 
 Método numérico de integración conocida como Método de Simpson 1/3 emplea una estimación basada en parábolas para determinar la integral definida de una función dentro de un rango específico. La expresión general de este método se describe mediante la siguiente fórmula:
+
 $$
-\int_{a}^{b} f(x) \, dx \approx \frac{h}{3} [ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) ]
+\int_{a}^{b} f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) \right]
 $$
 
 ```Python
