@@ -13,7 +13,7 @@
 Método numérico para la integración, conocida como el Método del Rectángulo, utiliza una aproximación basada en rectángulos para calcular la integral definida de una función en un intervalo dado. En términos generales, la fórmula se expresa como:
 
 $$
-\int_{a}^{b} f(x) \, dx \approx h \sum_{i=0}^{n-1} f(x_i)
+\[ \int_{a}^{b} f(x) \, dx \approx h \sum_{i=0}^{n-1} f(x_i) \]
 $$
 
 ```Python
@@ -63,12 +63,12 @@ plt.show()
 
 ## **1.2. METODO DE SIMPSON 1/3**
 
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1BJUCvWnr_2vyh6tou9v7PCyeUiRCDV70?usp=sharing)
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/12sg77KJNU2TiDso-KcWyi_m74l0gMmHy?usp=sharing)
 
 Método numérico de integración conocida como Método de Simpson 1/3 emplea una estimación basada en parábolas para determinar la integral definida de una función dentro de un rango específico. La expresión general de este método se describe mediante la siguiente fórmula:
 
 $$
-\int_{a}^{b} f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) \right]
+\[ \int_{a}^{b} f(x) \, dx \approx \frac{h}{3} \left[ f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \cdots + 2f(x_{n-2}) + 4f(x_{n-1}) + f(x_n) \right] \]
 $$
 
 ```Python
