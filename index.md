@@ -7,7 +7,7 @@
 
 ## **1.1. TIEMPO HISTORIA**
 
-[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://colab.research.google.com/drive/1x_ca2-5u-1tdmCVc-W1JuR15ZftuTgDx?usp=sharing)
+[![Run in Google Colab](https://img.shields.io/badge/Colab-Google_Colab-blue?logo=Google&logoColor=FDBA18)](https://drive.google.com/file/d/1_Hf_KMQDgsvx9Gy0SNv-FluikumSVWSH/view?usp=sharing)
 
 **<font color="skyblue"><i>importar librerias</i></font>**
 ```Python
@@ -90,7 +90,7 @@ plt.xlim([0, max(acce1[:, 0])])
 plt.ylim([min(acce1[:, 1]) - 0.2, max(acce1[:, 1]) + 0.2])
 ```
 <p align="center">
-  <img src="assets/img/rr.png" alt="Ecuación">
+  <img src="assets/img/rr.png" alt="rr">
 </p>
 
 
@@ -109,7 +109,7 @@ plt.ylim([min(u) - 0.02, max(u) + 0.02])
 ```
 
 <p align="center">
-  <img src="assets/img/sd.png" alt="Ecuación">
+  <img src="assets/img/sd.png" alt="sd">
 </p>
 
 
@@ -126,7 +126,7 @@ plt.xlim([0, max(acce1[:, 0])])
 plt.ylim([min(v) - 0.2, max(v) + 0.2])
 ```
 <p align="center">
-  <img src="assets/img/sv.png" alt="Ecuación">
+  <img src="assets/img/sv.png" alt="sv">
 </p>
 
 
@@ -145,7 +145,7 @@ plt.xlim([0, max(acce1[:, 0])])
 plt.ylim([min(a) - 0.2, max(a) + 0.2])
 ```
 <p align="center">
-  <img src="assets/img/sa.png" alt="Ecuación">
+  <img src="assets/img/sa.png" alt="sa">
 </p>
 
 
