@@ -1,6 +1,6 @@
-title: Minimal theme
+title: AMILCAR MACHACCA
 logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
+description: ¡Hola! Soy Amilcar Machacca Mayo, un apasionado estudiante de Ingeniería Civil en el octavo semestre. Mi fascinación se centra en la ingeniería estructural, la programación y la geotecnia. Estoy comprometido con el aprendizaje constante y el desarrollo de habilidades en diversas áreas. Poseo habilidades técnicas en programación, utilizando Python, y experiencia en el manejo de software de ingeniería como Revit, AutoCAD, Delphin Express y S10. Además, tengo destrezas en herramientas de oficina como Word y Excel. Explorar y aplicar conocimientos es mi motor de motivación.
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
